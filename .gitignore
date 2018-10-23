@@ -1,0 +1,10 @@
+#
+# Eclipse files
+#
+.project
+.settings
+
+#
+# npm libraries storage
+#
+node_modules

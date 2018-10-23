@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <title>Attack.map</title>
+    <link href="/app/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/app/css/map.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="map"></div>
+
+    <table id="board-container" cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+            <tr>
+                <td width="175px">
+                    <table id="statistic" border="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <td colspan="3">Attack Origins</td>
+                            </tr>
+                            <tr>
+                                <td width="35px">#</td>
+                                <td width="20px"></td>
+                                <td width="120px">Source IP</td>
+                            </tr>
+                        </thead>
+                        <tbody id="statistic-display">
+                        </tbody>
+                    </table>
+                </td>
+                <td width="10px">
+                </td>
+                <td>
+                    <table id="feed" width="100%" border="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <td colspan="9">Attacks</td>
+                            </tr>
+                            <tr>
+                                <td width="120px">Timestamp</td>
+                                <td>Attacker</td>
+                                <td width="120px">Attacker IP</td>
+                                <td>Attacker Geo</td>
+                                <td>Victim</td>
+                                <td width="120px">Victim IP</td>
+                                <td>Victim Geo</td>
+                                <td>Attack Type</td>
+                                <td width="40px">Port</td>
+                            </tr>
+                        </thead>
+                        <tbody id="feed-display">
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="/lib/d3/d3.min.js"></script>
+    <script src="/lib/topojson/topojson.min.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/lodash/index.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/app/js/client/config.js"></script>
+    <script src="/app/js/client/theme.js"></script>
+    <script src="/app/js/client/map.js"></script>
+    <script src="/app/js/client/board/board.js"></script>
+    <script src="/app/js/client/board/boardStatisticSection.js"></script>
+    <script src="/app/js/client/board/boardFeedSection.js"></script>
+    <script src="/app/js/client/dataProvider.js"></script>
+    <script src="/app/js/client/application.js"></script>
+    <script>
+    new Application().bootstrap("#map");
+    </script>
+</body>
+</html>
